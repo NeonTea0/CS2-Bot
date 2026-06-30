@@ -1,0 +1,9 @@
+# Plumbing deps — gameplay recorder (capture.py). Pin later once versions confirmed.
+bettercam         # screen capture (DXGI monitor grab, high-FPS fullscreen games)
+pynput            # keyboard + mouse capture for the recorder
+opencv-python     # write frames to PNG
+numpy
+
+# Parked — needed once the bot acts (Phase 4), not for recording:
+pydirectinput     # actuator.py: synthetic mouse/keyboard (the bot's hands)
+pyyaml            # genre profile configs (tycoon.yaml)

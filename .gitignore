@@ -1,0 +1,14 @@
+# Memory vault
+bot_vault/
+
+# Large / regenerated artifacts
+data/
+models/
+/yolo11s.pt
+*.avi
+**/weights/last.pt
+
+# Python
+venv/
+venv-*/
+__pycache__/

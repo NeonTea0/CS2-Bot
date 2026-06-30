@@ -1,0 +1,13 @@
+# venv-ml (Python 3.12) — YOLO11 training + inference. Rebuild:
+#   py -V:3.12 -m venv venv-ml
+#   venv-ml\Scripts\python.exe -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cu128
+#   venv-ml\Scripts\python.exe -m pip install -r requirements-train.txt
+#
+# torch/torchvision MUST come from the cu128 index FIRST (separate line above) —
+# RTX 5060 = Blackwell (sm_120) needs cu128; default-index torch crashes "no kernel image".
+# Do NOT pin torch here or pip pulls the CPU build from PyPI.
+
+ultralytics==8.4.75
+
+# NOTE: auto-labeling (Grounding DINO) was removed. If you re-add it, also need:
+#   scikit-learn  roboflow  transformers==4.44.2   (transformers 5.x breaks groundingdino)
